@@ -13,4 +13,54 @@ export const content = {
     ],
     punchline: "Great websites are built by people who care. Let's build yours.",
   },
+  projects: {
+    heading: "Selected work",
+    seeAll: "See all projects",
+    portfolioTitle: "Portfolio",
+    portfolioIntro:
+      "A selection of client work and concept projects — each one designed around a real business goal.",
+    backHome: "← Back home",
+    items: [
+      {
+        id: "rentart",
+        name: "Rentart",
+        client: "Galerie Sept — Brussels & Knokke",
+        type: "Catalogue website",
+        demo: false,
+        description:
+          "An art rental platform for professional spaces. Browsable catalogue with smart filters, artwork detail pages and integrated appointment booking — built to turn curious visitors into gallery meetings.",
+        stack: ["React", "Vercel"],
+        url: "https://rentart.vercel.app/",
+        images: [
+          "/projects/rentart-1.png",
+          "/projects/rentart-2.png",
+          "/projects/rentart-3.png",
+        ],
+      },
+      {
+        id: "atelier-lune",
+        name: "Atelier Lune",
+        client: "Concept — artisan pastry shop",
+        type: "Brand & showcase website",
+        demo: true,
+        description:
+          "A concept identity for an artisan pastry shop: warm visuals, a mouth-watering gallery and a simple order-ahead flow designed to bring locals through the door.",
+        stack: ["React", "GSAP"],
+        url: null,
+        images: [],
+      },
+      {
+        id: "studio-verde",
+        name: "Studio Verde",
+        client: "Concept — landscape architect",
+        type: "Portfolio website",
+        demo: true,
+        description:
+          "A concept portfolio for a landscape architect, built around full-screen project imagery and a clear contact journey — because outdoor work deserves to breathe on screen.",
+        stack: ["React", "GSAP"],
+        url: null,
+        images: [],
+      },
+    ],
+  },
 }

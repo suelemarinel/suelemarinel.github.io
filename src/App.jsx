@@ -1,12 +1,13 @@
-import Hero from "./components/Hero.jsx"
-import About from "./components/About.jsx"
+import { Routes, Route } from "react-router-dom"
+import Home from "./pages/Home.jsx"
+import Portfolio from "./pages/Portfolio.jsx"
 
 function App() {
   return (
-    <main>
-      <Hero />
-      <About />
-    </main>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/portfolio" element={<Portfolio />} />
+    </Routes>
   )
 }
 
