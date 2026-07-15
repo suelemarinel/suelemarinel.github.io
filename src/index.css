@@ -55,3 +55,28 @@ body {
   color: var(--gray-mauve);
   max-width: 32rem;
 }
+
+.hero-word {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  padding-bottom: 0.1em;
+  margin-right: 0.25em;
+}
+
+.hero-word:last-child {
+  margin-right: 0;
+}
+
+.hero-letter {
+  display: inline-block;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-letter,
+  .hero-eyebrow,
+  .hero-tagline {
+    animation: none !important;
+  }
+}
