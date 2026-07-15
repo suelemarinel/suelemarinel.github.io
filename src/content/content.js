@@ -1,4 +1,8 @@
 export const content = {
+  intro: {
+    welcome: "Welcome to my portfolio",
+    hint: "click to enter",
+  },  
   hero: {
     name: "Sue Le Marinel",
     title: "Web developer",
