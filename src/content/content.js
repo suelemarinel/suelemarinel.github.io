@@ -63,4 +63,39 @@ export const content = {
       },
     ],
   },
+  skills: {
+    heading: "What I can do for you",
+    items: [
+      {
+        title: "Custom design & identity",
+        description:
+          "A visual identity built from scratch around your business — colors, typography and layout that make you instantly recognizable.",
+      },
+      {
+        title: "Websites that convert",
+        description:
+          "Fast, responsive and thought through: every page is designed to guide your visitors toward becoming clients.",
+      },
+      {
+        title: "Motion & interactions",
+        description:
+          "Subtle animations that bring your site to life and make people remember it — never at the cost of speed.",
+      },
+      {
+        title: "Long-term partnership",
+        description:
+          "SEO foundations, easy content updates and ongoing improvements as your business grows. I don't disappear after launch.",
+      },
+    ],
+  },
+  contact: {
+    heading: "Let's work together",
+    text: "Got a project in mind, or just want to explore an idea? Tell me about your business — I'll tell you how a website can help it grow.",
+    cta: "Say hi",
+    email: "sue.lemarinel@gmail.com",
+    socials: [
+      { label: "GitHub", url: "https://github.com/suelemarinel" },
+      { label: "LinkedIn", url: "https://linkedin.com/in/TON-PROFIL" },
+    ],
+  },
 }
