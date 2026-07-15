@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 
 const SLIDE_DURATION = 3500
 
@@ -18,13 +19,8 @@ function ProjectCard({ project }) {
     return () => clearInterval(interval)
   }, [images.length])
 
-  const CardTag = project.url ? "a" : "div"
-  const linkProps = project.url
-    ? { href: project.url, target: "_blank", rel: "noopener noreferrer" }
-    : {}
-
   return (
-    <CardTag className="project-card" {...linkProps}>
+    <Link className="project-card" to={`/portfolio/${project.id}`}>
       <div className="project-image-wrap">
         {images.length > 0 ? (
           <>
@@ -66,7 +62,7 @@ function ProjectCard({ project }) {
           ))}
         </ul>
       </div>
-    </CardTag>
+    </Link>
   )
 }
 

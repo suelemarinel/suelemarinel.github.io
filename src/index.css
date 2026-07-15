@@ -558,3 +558,315 @@ body {
 .intro-enter:hover .intro-hint {
   letter-spacing: 0.5em;
 }
+
+/* ---------- Project list (desktop) ---------- */
+
+.project-rows {
+  list-style: none;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.project-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--lilac);
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.project-rows li:first-child .project-row {
+  border-top: 1px solid var(--lilac);
+}
+
+.project-row-name {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 1.1;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.project-row:hover .project-row-name {
+  color: var(--mauve);
+  transform: translateX(1rem);
+}
+
+.project-row-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gray-mauve);
+  white-space: nowrap;
+}
+
+.project-row-badge {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--ink);
+  background: var(--lilac);
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+}
+
+.project-preview {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 22rem;
+  aspect-ratio: 16 / 10;
+  margin: -7rem 0 0 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0.85);
+  z-index: 50;
+  background: var(--lilac);
+}
+
+.project-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.preview-letter {
+  display: none;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 4rem;
+  color: var(--mauve);
+}
+
+/* ---------- Panorama ---------- */
+
+.panorama {
+  overflow: hidden;
+}
+
+.panorama-track {
+  display: flex;
+  height: 100vh;
+  width: max-content;
+  will-change: transform;
+}
+
+.panorama-panel {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.panorama-intro-panel,
+.panorama-outro-panel {
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.panorama-heading {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+}
+
+.panorama-hint {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gray-mauve);
+}
+
+.panorama-image {
+  width: min(70vw, 64rem);
+  aspect-ratio: 16 / 10;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(46, 36, 56, 0.18);
+}
+
+.panorama-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.panorama-name {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(4rem, 12vw, 10rem);
+  line-height: 1;
+  color: var(--mist);
+  mix-blend-mode: difference;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.panorama-meta {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gray-mauve);
+  white-space: nowrap;
+}
+
+.panorama-badge {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--ink);
+  background: var(--lilac);
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+}
+
+.panorama-see-all {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.panorama-see-all:hover {
+  color: var(--mauve);
+}
+
+/* ---------- Portfolio (vertical showcase) ---------- */
+
+.folio-slide {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+  text-decoration: none;
+  color: inherit;
+}
+
+.folio-intro {
+  gap: 1.25rem;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+/* ---------- Case study ---------- */
+
+.case {
+  max-width: 76rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 8rem;
+}
+
+.case-back {
+  display: inline-block;
+  margin-bottom: 3rem;
+}
+
+.case-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.case-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(3.5rem, 11vw, 9rem);
+  line-height: 1;
+}
+
+.case-intro {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  max-width: 40rem;
+  margin-bottom: 5rem;
+}
+
+.case-section {
+  margin-bottom: 5rem;
+}
+
+.case-section img {
+  width: 100%;
+  border-radius: 1.25rem;
+  box-shadow: 0 16px 60px rgba(46, 36, 56, 0.12);
+}
+
+.case-section figcaption {
+  max-width: 36rem;
+  margin-top: 1.5rem;
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: var(--gray-mauve);
+}
+
+.case-section:nth-child(even) figcaption {
+  margin-left: auto;
+  text-align: right;
+}
+
+.case-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--lilac);
+  padding-top: 3rem;
+}
+
+.case-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, max-content));
+  gap: 1.5rem 3rem;
+}
+
+.case-details dt {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mauve);
+  margin-bottom: 0.35rem;
+}
+
+.case-details dd {
+  font-size: 0.9375rem;
+  font-weight: 500;
+}

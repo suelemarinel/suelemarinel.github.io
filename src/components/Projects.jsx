@@ -1,35 +1,25 @@
-import { useRef } from "react"
+import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-import gsap from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { useGSAP } from "@gsap/react"
 import { content } from "../content/content.js"
 import ProjectCard from "./ProjectCard.jsx"
-
-gsap.registerPlugin(ScrollTrigger)
+import ProjectPanorama from "./ProjectPanorama.jsx"
 
 function Projects() {
-  const sectionRef = useRef(null)
-
-  useGSAP(
-    () => {
-      gsap.from(".project-card", {
-        opacity: 0,
-        y: 48,
-        duration: 0.8,
-        ease: "power3.out",
-        stagger: 0.15,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 70%",
-        },
-      })
-    },
-    { scope: sectionRef }
+  const [hasHover, setHasHover] = useState(
+    () => window.matchMedia("(hover: hover) and (pointer: fine)").matches
   )
 
+  useEffect(() => {
+    const mq = window.matchMedia("(hover: hover) and (pointer: fine)")
+    const onChange = (e) => setHasHover(e.matches)
+    mq.addEventListener("change", onChange)
+    return () => mq.removeEventListener("change", onChange)
+  }, [])
+
+  if (hasHover) return <ProjectPanorama />
+
   return (
-    <section className="projects" ref={sectionRef} id="projects">
+    <section className="projects" id="projects">
       <div className="projects-header">
         <h2 className="projects-heading">{content.projects.heading}</h2>
         <Link className="projects-see-all" to="/portfolio">

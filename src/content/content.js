@@ -40,6 +40,26 @@ export const content = {
           "/projects/rentart-2.png",
           "/projects/rentart-3.png",
         ],
+          caseStudy: {
+          intro:
+            "Galerie Sept needed a way to bring art rental to professional spaces — restaurants, hotels, offices. The goal: make browsing artworks as easy as booking a table.",
+          sections: [
+            {
+              text: "A filterable catalogue puts the collection front and center. Visitors browse by size and budget, and every artwork gets its own detail page with multiple views.",
+              image: "https://picsum.photos/seed/rentart-a/1800/1100",
+            },
+            {
+              text: "The journey ends with one clear action: booking a consultation at the gallery, integrated directly with their calendar.",
+              image: "https://picsum.photos/seed/rentart-b/1800/1100",
+            },
+          ],
+          details: {
+            completed: "2026",
+            type: "Catalogue website",
+            role: "Design & development",
+            client: "Galerie Sept",
+          },
+        },
       },
       {
         id: "atelier-lune",
@@ -51,7 +71,7 @@ export const content = {
           "A concept identity for an artisan pastry shop: warm visuals, a mouth-watering gallery and a simple order-ahead flow designed to bring locals through the door.",
         stack: ["React", "GSAP"],
         url: null,
-        images: [],
+        images: ["https://picsum.photos/seed/atelierlune/1600/1000"],
       },
       {
         id: "studio-verde",
@@ -63,7 +83,7 @@ export const content = {
           "A concept portfolio for a landscape architect, built around full-screen project imagery and a clear contact journey — because outdoor work deserves to breathe on screen.",
         stack: ["React", "GSAP"],
         url: null,
-        images: [],
+        images: ["https://picsum.photos/seed/studioverde/1600/1000"],
       },
     ],
   },
